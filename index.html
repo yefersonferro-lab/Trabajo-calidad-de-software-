@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calidad de Software - Aplicativo Educativo</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Calidad de Software — Aplicativo Educativo</h1>
+      <nav class="top-nav" aria-label="Navegación principal">
+        <a href="#normas">Normas</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#estandares">Estándares</a>
+        <a href="#codigo">Código</a>
+        <a href="#pruebas">Pruebas</a>
+        <a href="#evaluacion">Evaluación</a>
+        <a href="#conclusiones">Conclusiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <!-- LEFT: content -->
+    <section class="content" aria-live="polite">
+      <!-- NORMAS -->
+      <article id="normas" class="card">
+        <h2>Normas</h2>
+        <p class="lead">Las normas son documentos técnicos que establecen criterios y procedimientos para asegurar la calidad del software. En entornos educativos permiten convertir criterios abstractos en actividades y métricas reproducibles.</p>
+
+        <div class="cards-row">
+          <div class="info-card">
+            <h3>ISO/IEC 25010</h3>
+            <p>Marco para evaluar la calidad del producto software mediante características y subcaracterísticas medibles.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Descripción general:</strong> ISO/IEC 25010 es parte de la familia 25000 y define un modelo de calidad centrado en el producto. Su objetivo es proporcionar una taxonomía para describir y medir la calidad del software en términos claros y replicables.</p>
+
+              <p><strong>Aplicación práctica:</strong> Para cada subcaracterística (por ejemplo, "tiempo de respuesta" dentro de eficiencia) se diseñan métricas concretas: tiempos promedio, percentiles (p95), índice de latencia en ms, etc. En el aula, la norma se utiliza para:</p>
+              <ul>
+                <li>Transformar objetivos de aprendizaje en criterios de evaluación medibles.</li>
+                <li>Diseñar casos de prueba y hojas de evaluación con rúbricas que reflejen las subcaracterísticas.</li>
+                <li>Comparar versiones de un mismo proyecto midiendo la evolución de los indicadores.</li>
+              </ul>
+
+              <p><strong>Subcaracterísticas clave y ejemplos de métricas:</strong></p>
+              <ul>
+                <li><em>Funcionalidad</em> — porcentaje de requisitos cumplidos, número de defectos por requisito crítico.</li>
+                <li><em>Fiabilidad</em> — MTBF (tiempo medio entre fallos), tasa de fallos por despliegue.</li>
+                <li><em>Usabilidad</em> — tiempo medio de tarea, tasa de errores de usuario, puntuaciones SUS.</li>
+                <li><em>Eficiencia</em> — throughput, uso de CPU/RAM por transacción.</li>
+                <li><em>Mantenibilidad</em> — complejidad ciclomática media, tiempo para corregir defecto (MTTR).</li>
+                <li><em>Portabilidad</em> — número de entornos soportados sin cambios, esfuerzo de adaptación.</li>
+              </ul>
+
+              <p><strong>En resumen:</strong> ISO/IEC 25010 no solo da categorías; proporciona el andamiaje para diseñar métricas, establecer umbrales y convertir juicios cualitativos en indicadores cuantitativos que se pueden repetir en prácticas académicas y auditorías.</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>ISO/IEC 12207</h3>
+            <p>Estándar para procesos del ciclo de vida de software: adquisición, desarrollo, operación y mantenimiento.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Contenido y propósito:</strong> ISO/IEC 12207 define un conjunto de procesos (primarios, de apoyo y organizacionales) para gestionar el ciclo de vida del software. En un curso, ayuda a estructurar actividades, roles y entregables—por ejemplo: plan de pruebas, gestión de configuración, control de cambios y aseguramiento de calidad.</p>
+
+              <p><strong>Procesos primarios (ejemplos):</strong></p>
+              <ul>
+                <li><em>Desarrollo:</em> análisis de requisitos, diseño, implementación.</li>
+                <li><em>Operación:</em> despliegue, monitoreo, soporte al usuario.</li>
+                <li><em>Mantenimiento:</em> correcciones, adaptaciones y mejoras.</li>
+              </ul>
+
+              <p><strong>Usos en entornos educativos:</strong> permite al docente simular el rol de gerente de proyecto, asignar entregables en fases, y evaluar la adherencia a procesos (checklists, registros de cambio, bitácoras de pruebas).</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>CMMI (Capability Maturity Model Integration)</h3>
+            <p>Modelo de madurez para evaluar y mejorar procesos organizacionales.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Qué mide:</strong> CMMI clasifica la madurez de una organización en niveles (Inicial, Gestionado, Definido, Cuantitativamente Gestionado, Optimizado). Cada nivel describe prácticas y procesos que permiten mayor control y previsibilidad.</p>
+
+              <p><strong>Aplicación práctica:</strong> en proyectos académicos se pueden usar niveles de CMMI como rúbricas de evaluación de procesos (¿el equipo realiza code review regularmente? ¿hay un proceso formal de gestión de defectos?).</p>
+
+              <p><strong>Beneficios:</strong> mejora la disciplina en el trabajo grupal, reduce retrabajo y facilita la adopción de prácticas repetibles que aumentan la calidad del producto.</p>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin-top:12px;">Video explicativo</h4>
+        <div class="video-wrap" style="margin-top:8px;">
+          <iframe id="videoNormas" src="https://www.youtube.com/embed/804tCVr2oc0" title="Video Normas" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <!-- MODELOS -->
+      <article id="modelos" class="card">
+        <h2>Modelos</h2>
+        <p class="lead">Los modelos conceptuales de calidad proporcionan marcos para vincular atributos internos del software con la calidad percibida externamente. En educación, permiten diseñar actividades donde se observe el efecto de cambios técnicos sobre la calidad.</p>
+
+        <div class="cards-row">
+          <div class="info-card">
+            <h3>McCall</h3>
+            <p>Modelo clásico que introduce factores de calidad y métricas asociadas.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Contexto:</strong> McCall (1977) propone evaluar la calidad mediante factores (corrección, confiabilidad, eficiencia, integridad, usabilidad) y criterios medibles. Es útil en cursos introductorios para enseñar cómo construir métricas a partir de factores conceptuales.</p>
+
+              <p><strong>Cómo usarlo en la práctica:</strong> definir indicadores por factor (p. ej., tiempo medio de respuesta para eficiencia), y comparar módulos del proyecto para priorizar refactor.</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Boehm</h3>
+            <p>Enfatiza la relación entre calidad y satisfacción del usuario final.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Idea clave:</strong> Boehm destaca que la calidad incluye atributos percibidos por el usuario como usabilidad y utilidad. En el aula se traduce en ejercicios de evaluación con usuarios (focus groups, pruebas de usabilidad) y en métricas subjetivas (encuestas, NPS).</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Dromey</h3>
+            <p>Relaciona atributos internos (estructura del código) con calidad externa.</p>
+            <button class="toggle-more">Leer más</button>
+            <div class="more">
+              <p><strong>Aporte:</strong> Dromey ayuda a entender cómo características de diseño (acoplamiento, cohesión) se reflejan en mantenibilidad y confiabilidad. Esto es muy práctico para actividades de refactor donde se observen métricas antes y después.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline" style="margin-top:12px;">
+          <div><strong>1977</strong> — McCall</div>
+          <div><strong>1978</strong> — Boehm</div>
+          <div><strong>1995</strong> — Dromey</div>
+          <div><strong>2000s</strong> — Modelos integrados y estándares</div>
+        </div>
+      </article>
+
+      <!-- ESTANDARES -->
+      <article id="estandares" class="card">
+        <h2>Estándares</h2>
+        <p class="lead">Los estándares (IEEE, ISO) proporcionan plantillas y prácticas para documentación, pruebas y diseño. Integrarlos en proyectos académicos prepara al estudiante para entornos profesionales.</p>
+        <button class="toggle-more">Leer más</button>
+        <div class="more">
+          <p><strong>IEEE 829 / ISO 29119 (Pruebas):</strong> proveen plantillas para planes de prueba, casos de prueba, informes de ejecución y resumen de cobertura. Enseñar su uso mejora la calidad de los entregables y facilita la evaluación objetiva.</p>
+
+          <p><strong>IEEE 1016 (Diseño):</strong> estructura la documentación de diseño, obligando a justificar decisiones arquitectónicas y favoreciendo la trazabilidad.</p>
+
+          <p><strong>ISO 9001 (Gestión de calidad):</strong> orienta la organización de procesos y controles, útil para asignar roles y procedimientos en proyectos de curso.</p>
+
+          <p><strong>Cuestiones prácticas:</strong> usar estándares al principio puede parecer burocrático, pero cuando se contextualiza (entregables claros, plantillas, checklists) se observa una mejora real en la calidad y reproducibilidad de los resultados académicos.</p>
+        </div>
+      </article>
+
+      <!-- CÓDIGO -->
+      <article id="codigo" class="card">
+        <h2>Código y buenas prácticas</h2>
+        <p class="lead">El código es el artefacto principal donde se materializan muchas características de calidad. Adoptar buenas prácticas desde el inicio reduce defectos y facilita mantenimiento.</p>
+
+        <button class="toggle-more">Leer más</button>
+        <div class="more">
+          <p><strong>Control de versiones (Git):</strong> usar ramas, commits atómicos y PRs para revisar cambios. Enseña trazabilidad y facilita revertir cambios, además de servir como evidencia de trabajo individual y colaborativo.</p>
+
+          <p><strong>Revisiones de código:</strong> code reviews formales detectan defectos tempranos y fomentan aprendizaje entre pares.</p>
+
+          <p><strong>Linters y formateadores:</strong> herramientas automáticas (ESLint, Prettier, Pylint) estandarizan estilo y evitan errores típicos.</p>
+
+          <p><strong>Pruebas automatizadas y CI/CD:</strong> integrar pipelines de CI que ejecuten tests en cada push asegura regresiones mínimas y acelera feedback a los estudiantes.</p>
+
+          <p><strong>Documentación y trazabilidad:</strong> vincular requisitos a casos de prueba y a commits facilita auditoría y evaluación en cursos basados en evidencia.</p>
+
+          <h3>Ejemplo extenso (JavaScript)</h3>
+          <pre class="code-block">
+/**
+ * calcularPromedio - función robusta con validaciones y tests
+ * @param {number[]} numeros - arreglo de números
+ * @returns {number} promedio o 0 si vacío
+ */
+function calcularPromedio(numeros) {
+  if (!Array.isArray(numeros)) throw new TypeError('Se espera un arreglo de números');
+  if (numeros.length === 0) return 0;
+  const suma = numeros.reduce((a,b) => a + b, 0);
+  return suma / numeros.length;
+}
+          </pre>
+
+          <p>Actividad: escribir tests unitarios (Jest), medir cobertura y documentar casos límite (valores nulos, enteros, decimales, listas vacías).</p>
+        </div>
+      </article>
+
+      <!-- PRUEBAS -->
+      <article id="pruebas" class="card">
+        <h2>Pruebas y evaluación</h2>
+        <p class="lead">Las pruebas transforman suposiciones en evidencia verificable. En el contexto educativo, diseñar y ejecutar pruebas es una de las formas más efectivas de aprender buenas prácticas de ingeniería de software.</p>
+
+        <button class="toggle-more">Leer más</button>
+        <div class="more">
+          <p><strong>Tipos de prueba y su propósito:</strong></p>
+          <ul>
+            <li><strong>Unitarias:</strong> validar pequeñas unidades lógicas; rápidas y precisas.</li>
+            <li><strong>Integración:</strong> verificar interacción entre componentes.</li>
+            <li><strong>Sistema & Aceptación:</strong> comprobar requisitos funcionales end-to-end.</li>
+            <li><strong>Usabilidad:</strong> evaluar la experiencia del usuario con métodos cualitativos y cuantitativos.</li>
+            <li><strong>Rendimiento:</strong> pruebas de carga, estrés y estabilidad.</li>
+          </ul>
+
+          <p><strong>Métricas relevantes:</strong> densidad de defectos, cobertura de pruebas, complejidad ciclomática, tiempo medio de reparación (MTTR), cobertura de requisitos (trazabilidad).</p>
+
+          <p><strong>Interpretación en aula:</strong> diseñar experimentos donde los estudiantes midan estas métricas antes y después de aplicar mejoras (tests adicionales, refactor). La comparación de resultados ofrece aprendizaje por evidencia y fomenta pensamiento crítico.</p>
+        </div>
+      </article>
+
+      <!-- EVALUACIÓN -->
+      <article id="evaluacion" class="card">
+        <h2>Evaluación cuantitativa</h2>
+        <p class="lead">Introduce valores en las métricas para obtener una calificación final (0–5), ver gráficos y recibir recomendaciones automáticas. El sistema normaliza las métricas y aplica ponderaciones para generar una única puntuación útil para informes y comparaciones.</p>
+
+        <button class="toggle-more">Leer más</button>
+        <div class="more">
+          <p><strong>Razonamiento detrás de la normalización:</strong> las métricas crudas (p. ej., defectos por KLOC o porcentaje de cobertura) tienen escalas distintas. Para combinarlas se mapean a una escala común (0–5), lo cual permite ponderar según la importancia pedagógica o técnica. Por ejemplo, si cobertura es crítica para el curso, se le puede asignar mayor peso.</p>
+
+          <p><strong>Ponderaciones sugeridas y justificación:</strong> en esta herramienta se usan ponderaciones orientativas (defectos 25%, cobertura 30%, complejidad 20%, mantenibilidad 25%). Estas reflejan un equilibrio entre calidad interna (defectos, complejidad) y pruebas/soporte (cobertura, mantenibilidad). En entornos reales estos pesos pueden ajustarse según objetivos del proyecto.</p>
+
+          <p><strong>Interpretación de resultados:</strong> la puntuación final se traduce en interpretaciones (Excelente, Buena, Aceptable, Crítica) y en recomendaciones concretas que el sistema genera automáticamente. En la práctica educativa sirve como base para debates: ¿por qué un proyecto obtuvo X y cómo se puede mejorar?</p>
+        </div>
+
+        <form id="formMetrics" class="metrics-form" onsubmit="event.preventDefault(); calcularCalificacion();">
+          <label class="field">
+            <span>Densidad de defectos (defectos / KLOC)</span>
+            <input type="number" id="defectos" min="0" step="0.1" placeholder="ej. 0.5" />
+            <small>Menos defectos → mejor puntuación</small>
+          </label>
+
+          <label class="field">
+            <span>Cobertura de pruebas (%)</span>
+            <input type="number" id="cobertura" min="0" max="100" step="1" placeholder="ej. 85" />
+            <small>100% → puntuación 5</small>
+          </label>
+
+          <label class="field">
+            <span>Complejidad ciclomática (promedio)</span>
+            <input type="number" id="complejidad" min="1" step="1" placeholder="ej. 6" />
+            <small>Valores más bajos son mejores</small>
+          </label>
+
+          <label class="field">
+            <span>Índice de mantenibilidad (%)</span>
+            <input type="number" id="mantenibilidad" min="0" max="100" step="1" placeholder="ej. 70" />
+            <small>100% → puntuación 5</small>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Calcular Calificación</button>
+            <button type="button" class="btn" id="btnExport">Exportar JSON</button>
+            <button type="button" class="btn" id="btnClear">Limpiar</button>
+          </div>
+        </form>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <h3>Resultado</h3>
+            <p id="resultadoTexto" class="big-number">— / 5</p>
+            <p id="interpretacion" class="interpretacion">Introduce métricas y calcula para ver la interpretación.</p>
+          </div>
+
+          <div class="charts-card">
+            <canvas id="chartBar"></canvas>
+            <canvas id="chartRadar" style="margin-top:18px;"></canvas>
+          </div>
+        </div>
+
+        <div id="recomendacionCard" class="reco-card hidden">
+          <h3>Recomendaciones automáticas</h3>
+          <div id="recomendaciones"></div>
+        </div>
+      </article>
+
+      <!-- CONCLUSIONES -->
+      <article id="conclusiones" class="card">
+        <h2>Conclusiones y recursos</h2>
+        <p class="lead">Este aplicativo educativo facilita el aprendizaje de calidad de software mediante métricas, experimentos y actividades prácticas. Mide, compara y recomienda acciones concretas para mejorar.</p>
+
+        <button class="toggle-more">Leer más</button>
+        <div class="more">
+          <p><strong>Conclusiones esenciales:</strong></p>
+          <ul>
+            <li>Medir es fundamental: métricas bien definidas permiten tomar decisiones objetivas y medir el impacto de las mejoras.</li>
+            <li>Integrar pruebas y CI desde etapas tempranas reduce la deuda técnica y mejora la confianza en las entregas.</li>
+            <li>Las normas y estándares facilitan la reproducibilidad y la evaluación objetiva en contextos académicos y profesionales.</li>
+          </ul>
+
+          <h3>Recomendaciones de uso docente</h3>
+          <p>Se sugiere emplear la herramienta en actividades como:</p>
+          <ul>
+            <li>Evaluación inicial (baseline) y evaluación final para medir impacto de intervenciones pedagógicas.</li>
+            <li>Ejercicios de refactor: medir mantenibilidad y complejidad antes y después.</li>
+            <li>Simulaciones de procesos (ISO/IEC 12207, CMMI) para entrenar roles y entregables.</li>
+            <li>Uso de plantillas estándar (IEEE) para informes y evaluación por rúbrica.</li>
+          </ul>
+
+          <h3>Recursos</h3>
+          <ul>
+            <li>ISO/IEC 25010 — Modelo de calidad del producto software.</li>
+            <li>ISO/IEC 12207 — Procesos del ciclo de vida del software.</li>
+            <li>CMMI — Modelo de madurez de procesos.</li>
+            <li>Herramientas de pruebas: Jest, Mocha, Selenium, Playwright.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- RIGHT: aside - multimedia y resumen -->
+    <aside class="aside">
+      <div class="sticky-aside">
+        <section class="card">
+          <h3>Video explicativo (Normas)</h3>
+          <div class="video-wrap">
+            <iframe id="videoNormasAside" src="https://www.youtube.com/embed/804tCVr2oc0" title="Video Normas" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Última evaluación</h3>
+          <div id="lastEval" class="last-eval">
+            <p>No hay evaluaciones guardadas.</p>
+            <button id="btnLoadLast" class="btn">Cargar última</button>
+          </div>
+        </section>
+
+        <section class="card small">
+          <h3>Guía rápida</h3>
+          <ol class="small-list">
+            <li>Completa las métricas.</li>
+            <li>Haz clic en <strong>Calcular</strong>.</li>
+            <li>Revisa gráficos y recomendaciones.</li>
+            <li>Exporta el reporte si lo necesitas.</li>
+          </ol>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 — Proyecto Calidad de Software. Página educativa.</p>
+      <div class="credit">
+        <p><strong>Proyecto realizado por:</strong> Yeferson Ferro — Estudiante, Universidad CUN</p>
+        <p><strong>Materia:</strong> Calidad de Software — <strong>Grupo:</strong> 55508</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
